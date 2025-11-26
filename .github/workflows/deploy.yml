@@ -36,7 +36,7 @@ jobs:
         run: ls -la v2/dist || echo "No v2/dist found"
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: v2/dist
 
