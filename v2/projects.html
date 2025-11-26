@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+    <script>
+        if (window.location.protocol === 'http:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+            window.location.protocol = 'https:';
+        }
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +17,12 @@
 
     <nav class="w-full py-6 border-b border-slate-100 bg-white/80 backdrop-blur-sm fixed top-0 z-50">
         <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
-            <a href="/" class="text-xl font-bold text-slate-900 tracking-tight">Soham Joshi</a>
+            <a href="./" class="text-xl font-bold text-slate-900 tracking-tight">Soham Joshi</a>
             <div class="hidden md:flex gap-8">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/projects.html" class="nav-link active">Projects</a>
-                <a href="/experience.html" class="nav-link">Experience</a>
-                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="./" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
         </div>
     </nav>
