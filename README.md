@@ -2,8 +2,6 @@
 
 A modern, professional portfolio website showcasing my projects, experience, and skills as a Computer Science & Engineering student at The Ohio State University.
 
-![Portfolio Preview](v2/public/logo.png)
-
 ## 🚀 Live Demo
 [View Live Site](https://soham-portfolio.vercel.app/) *(Replace with your actual deployment URL)*
 
