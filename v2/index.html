@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soham Joshi</title>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="w-full py-6 border-b border-slate-100 bg-white/80 backdrop-blur-sm fixed top-0 z-50">
+    <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
+      <a href="/" class="text-xl font-bold text-slate-900 tracking-tight">Soham Joshi</a>
+      <div class="hidden md:flex gap-8">
+        <a href="/" class="nav-link active">Home</a>
+        <a href="/projects.html" class="nav-link">Projects</a>
+        <a href="/experience.html" class="nav-link">Experience</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-4xl mx-auto px-6 pt-32 pb-20 w-full">
+
+    <!-- Hero Section -->
+    <div class="text-center space-y-8 animate-fade-in mb-32">
+      <h1 class="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight mb-4">
+        Soham Joshi
+      </h1>
+      <p class="text-xl md:text-2xl text-slate-600 font-light max-w-2xl mx-auto leading-relaxed">
+        Computer Science & Engineering student building innovative, problem-solving solutions.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+        <a href="/projects.html" class="btn-primary">View Projects</a>
+        <a href="https://www.google.com" target="_blank" class="btn-secondary">Resume</a>
+        <a href="/contact.html" class="btn-secondary">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- About Section (Merged) -->
+    <section class="flex flex-col md:flex-row gap-12 items-start mb-20 animate-fade-in-up">
+      <div class="w-full md:w-2/3 space-y-6 order-2 md:order-1">
+        <h2 class="text-3xl font-bold text-slate-900">About Me</h2>
+        <p class="text-slate-600 leading-relaxed">
+          I am a <b>Computer Science and Engineering student</b> at <b>The Ohio State University</b>. I enjoy working at
+          the
+          intersection
+          of Artificial Intelligence and real world problem solving. My academic background includes coursework in
+          Data Structures & Algorithms, Object Oriented Programming, Software Development,
+          Discrete Mathematics, Probability and Statistics, Linear Algebra, Calculus and Differential Equations,
+          and Design Thinking. I like bringing these concepts into the projects I work on and using them to build
+          practical ideas.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          Right now I am focused on building agentic AI agents that can help solve practical problems in a meaningful
+          way. I am currently working on <b>MoodLogger</b> through the BDAA project series at Ohio State. MoodLogger is
+          a
+          mental health well being web app that helps students track their emotions, practice mindfulness and access
+          personalized support. I am also developing <b>UniConnect</b>, a mobile app that aims to support international
+          students as they move abroad to pursue higher education.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          I have completed certifications on Generative AI, LLMs, Responsible AI, Prompt Design, SageMaker and Power BI
+          through NVIDIA, Google Cloud, AWS and Microsoft. I enjoy exploring new ideas in AI and software engineering
+          and I am always looking for ways to keep growing!
+        </p>
+      </div>
+      <div class="w-full md:w-1/3 flex-shrink-0 order-1 md:order-2 flex justify-center md:justify-end">
+        <img src="/profile.jpg" alt="Soham Joshi" class="w-64 h-auto rounded-lg shadow-md object-cover aspect-[3/4]">
+      </div>
+    </section>
+
+    <!-- University Section -->
+    <div class="text-center border-t border-slate-100 pt-12 w-full max-w-2xl mx-auto animate-fade-in-up"
+      style="animation-delay: 0.6s;">
+      <div class="inline-block p-3 rounded-full bg-slate-50 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+          <path d="M6 12v5c3 3 9 3 12 0v-5" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-slate-900">The Ohio State University</h3>
+      <p class="text-slate-600 mt-1">B.S. Computer Science and Engineering</p>
+      <p class="text-slate-500 text-sm mt-1">Minor in Entrepreneurship • Expected Graduation: May 2028</p>
+      <br>
+      <br>
+      <br>
+    </div>
+
+    <!-- Tech Stack Section -->
+    <section class="mb-20 animate-fade-in-up" style="animation-delay: 0.2s;">
+      <div class="flex items-center gap-3 mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-900">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        <h2 class="text-2xl font-bold text-slate-900">Tech Stack:</h2>
+      </div>
+
+      <div class="flex flex-wrap gap-2">
+        <!-- Badges -->
+        <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+          alt="CSS3">
+        <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white"
+          alt="Java">
+        <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+          alt="HTML5">
+        <img src="https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white"
+          alt="LaTeX">
+        <img src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white"
+          alt="Markdown">
+        <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+          alt="Python">
+        <img
+          src="https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white"
+          alt="Windows Terminal">
+        <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
+          alt="GitHub">
+        <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"
+          alt="Flask">
+        <img src="https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white"
+          alt="Render">
+        <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white"
+          alt="MySQL">
+        <img
+          src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+          alt="JavaScript">
+        <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+          alt="React">
+        <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white"
+          alt="NumPy">
+        <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white"
+          alt="Pandas">
+        <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"
+          alt="Vercel">
+        <img
+          src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white"
+          alt="Google Cloud">
+        <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" alt="Firebase">
+        <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"
+          alt="NodeJS">
+        <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"
+          alt="Vite">
+        <img src="https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34"
+          alt="Firebase">
+        <img
+          src="https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=for-the-badge&logo=Adobe%20Creative%20Cloud&logoColor=white"
+          alt="Adobe Creative Cloud">
+        <img src="https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white"
+          alt="Adobe">
+        <img
+          src="https://img.shields.io/badge/Adobe%20Lightroom-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom&logoColor=white"
+          alt="Adobe Lightroom">
+        <img
+          src="https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white"
+          alt="Adobe Photoshop">
+        <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"
+          alt="Canva">
+        <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"
+          alt="Figma">
+        <img src="https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF" alt="Gimp">
+        <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white"
+          alt="PyTorch">
+        <img src="https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"
+          alt="Power BI">
+        <img src="https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white"
+          alt="nVIDIA">
+        <img src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white"
+          alt="Notion">
+        <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white"
+          alt="Jira">
+        <img src="https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white"
+          alt="Meta">
+        <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"
+          alt="Arduino">
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="mb-20 animate-fade-in-up" style="animation-delay: 0.4s;">
+      <div class="flex justify-between items-end mb-8">
+        <h2 class="text-2xl font-bold text-slate-900">Featured Projects</h2>
+        <a href="/projects.html"
+          class="text-sm font-medium text-slate-600 hover:text-slate-900 flex items-center gap-1">
+          View All Projects <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Placeholder Project 1 -->
+        <div class="card">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">MoodLogger</h3>
+          <p class="text-slate-600 mb-4 text-sm leading-relaxed">A mental health web app designed to help students
+            practice
+            mindfulness, access personalized emotional support, and improve mental well-being.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="badge">Full-Stack Development</span>
+            <span class="badge">AI Integration</span>
+            <span class="badge">Human-centered Design</span>
+          </div>
+          <a href="https://github.com/Soham-Codes/moodlogger" target="_blank"
+            class="btn-secondary text-sm py-2 px-4">View on GitHub</a>
+          <a href="https://moodlogger.lovable.app/" target="_blank" class="btn-secondary text-sm py-2 px-4">Try it
+            out!</a>
+        </div>
+
+        <!-- Placeholder Project 2 -->
+        <div class="card">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">UniConnect</h3>
+          <p class="text-slate-600 mb-4 text-sm leading-relaxed">Leading the vision and strategy for UniConnect, a
+            student-focused platform designed to support and empower university communities.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="badge">Mobile App Development</span>
+            <span class="badge">DBMS</span>
+            <span class="badge">Agile Methodologies</span>
+          </div>
+          <a href="https://uniconnectapp.vercel.app/" target="_blank" class="btn-secondary text-sm py-2 px-4">View
+            Website</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-100 text-center">
+    <div class="flex justify-center gap-6 mb-4">
+      <a href="https://github.com/Soham-Codes" target="_blank"
+        class="text-slate-400 hover:text-slate-900 transition-colors">GitHub</a>
+      <a href="https://www.linkedin.com/in/sohamjoshi0110/" target="_blank"
+        class="text-slate-400 hover:text-slate-900 transition-colors">LinkedIn</a>
+      <a href="https://linktr.ee/sohamj10" target="_blank"
+        class="text-slate-400 hover:text-slate-900 transition-colors">Linktree</a>
+    </div>
+    <p class="text-slate-400 text-sm">© Created with ❤️ by Soham using Google Antigravity</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

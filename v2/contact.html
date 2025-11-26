@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Soham Joshi</title>
+</head>
+
+<body class="flex flex-col min-h-screen bg-white">
+
+    <nav class="w-full py-6 border-b border-slate-100 bg-white/80 backdrop-blur-sm fixed top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-slate-900 tracking-tight">Soham Joshi</a>
+            <div class="hidden md:flex gap-8">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/projects.html" class="nav-link">Projects</a>
+                <a href="/experience.html" class="nav-link">Experience</a>
+                <a href="/contact.html" class="nav-link active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-4xl mx-auto px-6 pt-32 pb-20 w-full">
+        <div class="grid md:grid-cols-2 gap-12">
+
+            <!-- Contact Form -->
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900 mb-6">Get in Touch</h1>
+                <p class="text-slate-600 mb-8">Feel free to reach out for collaborations or just a friendly hello.</p>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message"
+                    class="hidden flex flex-col items-center justify-center h-full py-12 space-y-4">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Form Submitted!</h3>
+                    <p class="text-slate-600">Thank you for reaching out.</p>
+                </div>
+
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                    <input type="hidden" name="access_key" value="94a6aed2-88f6-49d5-a8aa-a883cfb11eb0">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-slate-900 focus:ring-1 focus:ring-slate-900 transition-all"
+                            required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-slate-900 focus:ring-1 focus:ring-slate-900 transition-all"
+                            required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-slate-900 focus:ring-1 focus:ring-slate-900 transition-all resize-none"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full">Submit</button>
+                </form>
+
+                <script>
+                    const form = document.getElementById('contact-form');
+                    const successMessage = document.getElementById('success-message');
+
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const formData = new FormData(form);
+                        const object = Object.fromEntries(formData);
+                        const json = JSON.stringify(object);
+
+                        // Show loading state if desired (optional)
+                        const submitBtn = form.querySelector('button');
+                        const originalBtnText = submitBtn.innerText;
+                        submitBtn.innerText = 'Sending...';
+
+                        fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: json
+                        })
+                            .then(async (response) => {
+                                let json = await response.json();
+                                if (response.status == 200) {
+                                    // Success!
+                                    form.classList.add('hidden');
+                                    successMessage.classList.remove('hidden');
+                                    form.reset();
+
+                                    // Wait 6 seconds then restore form
+                                    setTimeout(() => {
+                                        successMessage.classList.add('hidden');
+                                        form.classList.remove('hidden');
+                                        submitBtn.innerText = originalBtnText;
+                                    }, 6000);
+                                } else {
+                                    console.log(response);
+                                    submitBtn.innerText = originalBtnText;
+                                    alert(json.message);
+                                }
+                            })
+                            .catch(error => {
+                                console.log(error);
+                                submitBtn.innerText = originalBtnText;
+                                alert('Something went wrong!');
+                            });
+                    });
+                </script>
+            </div>
+
+            <!-- Direct Links -->
+            <div class="flex flex-col justify-center space-y-8 md:pl-12 md:border-l border-slate-100">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Email</h3>
+                    <a href="mailto:joshi.soham@example.com"
+                        class="text-slate-600 hover:text-slate-900 transition-colors">joshi.542@osu.edu</a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Socials</h3>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://github.com/Soham-Codes" target="_blank"
+                            class="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/sohamjoshi0110/" target="_blank"
+                            class="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://linktr.ee/sohamj10" target="_blank"
+                            class="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            Linktree
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 border-t border-slate-100 text-center">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://github.com/Soham-Codes" target="_blank"
+                class="text-slate-400 hover:text-slate-900 transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/sohamjoshi0110/" target="_blank"
+                class="text-slate-400 hover:text-slate-900 transition-colors">LinkedIn</a>
+            <a href="https://linktr.ee/sohamj10" target="_blank"
+                class="text-slate-400 hover:text-slate-900 transition-colors">Linktree</a>
+        </div>
+        <p class="text-slate-400 text-sm">© Created with ❤️ by Soham using Google Antigravity</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

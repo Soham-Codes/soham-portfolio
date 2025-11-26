@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Soham Joshi</title>
+</head>
+
+<body class="flex flex-col min-h-screen bg-white">
+
+    <nav class="w-full py-6 border-b border-slate-100 bg-white/80 backdrop-blur-sm fixed top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-slate-900 tracking-tight">Soham Joshi</a>
+            <div class="hidden md:flex gap-8">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/projects.html" class="nav-link active">Projects</a>
+                <a href="/experience.html" class="nav-link">Experience</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-4xl mx-auto px-6 pt-32 pb-20 w-full">
+        <div class="mb-12">
+            <h1 class="text-3xl font-bold text-slate-900 mb-4">All Projects</h1>
+            <p class="text-slate-600">A collection of my technical projects and experiments.</p>
+        </div>
+
+        <div id="project-grid" class="grid md:grid-cols-2 gap-6">
+            <!-- Projects injected by JS -->
+        </div>
+    </main>
+
+    <footer class="py-8 border-t border-slate-100 text-center">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://github.com/Soham-Codes" target="_blank"
+                class="text-slate-400 hover:text-slate-900 transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/sohamjoshi0110/" target="_blank"
+                class="text-slate-400 hover:text-slate-900 transition-colors">LinkedIn</a>
+            <a href="https://linktr.ee/sohamj10" target="_blank"
+                class="text-slate-400 hover:text-slate-900 transition-colors">Linktree</a>
+        </div>
+        <p class="text-slate-400 text-sm">© Created with ❤️ by Soham using Google Antigravity</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
