@@ -37,10 +37,10 @@ jobs:
         run: ls -la v2/dist || echo "No v2/dist found"
 
       - name: Upload build output
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: build
-          path: ./dist
+          path: v2/dist
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        id: deployment
+        uses: actions/deploy-pages@v4
