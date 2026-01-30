@@ -27,7 +27,8 @@ if (projectGrid) {
 const experienceContainer = document.getElementById('experience-container');
 if (experienceContainer) {
   // Sort experience by date (newest first)
-  const sortedExperience = [...experience].sort((a, b) => new Date(b.sortDate) - new Date(a.sortDate));
+  // Use experience array directly to allow manual ordering
+  const sortedExperience = [...experience];
 
   // Add Central Line
   const line = document.createElement('div');

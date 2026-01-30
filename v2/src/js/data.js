@@ -59,12 +59,12 @@ export const experience = [
         tech: ["Customer Service", "Communication", "Problem Solving", "Teamwork"]
     },
     {
-        company: "Foliage Outdoors",
-        role: "Camping Instructor",
-        date: "Jun 2022 - Present",
-        sortDate: "2025-11",
-        description: "Conducting and coordinating camps, treks, and team-building events for K-12 students. Planning outdoor activities, ensuring safety, and facilitating teamwork and leadership skills.",
-        tech: ["Team Building", "Event Coordination", "Outdoor Leadership", "Safety Management"]
+        company: "Persistent Systems",
+        role: "AI Mentorship Program Intern",
+        date: "May 2025 - Aug 2025",
+        sortDate: "2025-08",
+        description: "Contributed to building AI-driven solutions. Developed AI agents, integrated OpenAI/Gemini APIs, and created a multi-agent system for document parsing and onboarding automation.",
+        tech: ["AI Agent Development", "API Integration", "Full-Stack Development", "Document Automation"]
     },
     {
         company: "InnAccel",
@@ -73,14 +73,6 @@ export const experience = [
         sortDate: "2025-08",
         description: "Supported the development of a structured cybersecurity framework (ISO 27001, NIST CSF). Drafted policies, created Incident Response Plans, and recommended security tools.",
         tech: ["Cybersecurity Frameworks", "Incident Response", "Policy Development", "Risk & Compliance"]
-    },
-    {
-        company: "Persistent Systems",
-        role: "AI Mentorship Program Intern",
-        date: "May 2025 - Aug 2025",
-        sortDate: "2025-08",
-        description: "Contributed to building AI-driven solutions. Developed AI agents, integrated OpenAI/Gemini APIs, and created a multi-agent system for document parsing and onboarding automation.",
-        tech: ["AI Agent Development", "API Integration", "Full-Stack Development", "Document Automation"]
     },
     {
         company: "The Ohio State University",
@@ -97,6 +89,14 @@ export const experience = [
         sortDate: "2023-06",
         description: "Conducted user behavior research, analyzed user experiences, and collaborated with the product team. Ensured training documents were clear and improved platform usability.",
         tech: ["User Research", "Behavioral Analysis", "Feedback Collection", "Product Development"]
+    },
+    {
+        company: "Foliage Outdoors",
+        role: "Camping Instructor",
+        date: "Jun 2022 - Present",
+        sortDate: "2025-11",
+        description: "Conducting and coordinating camps, treks, and team-building events for K-12 students. Planning outdoor activities, ensuring safety, and facilitating teamwork and leadership skills.",
+        tech: ["Team Building", "Event Coordination", "Outdoor Leadership", "Safety Management"]
     }
 ];
 
