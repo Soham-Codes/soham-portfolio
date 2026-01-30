@@ -43,6 +43,14 @@ export const projects = [
 
 export const experience = [
     {
+        company: "Handshake AI",
+        role: "AI Model Trainer (Contract Based)",
+        date: "Dec 2025 - Present",
+        sortDate: "2026-01",
+        description: "Developed and evaluated domain-specific prompts to test multimodal LLMs across text, audio and visual inputs. Analyzed LLM outputs for scientific accuracy, clarity, and depth, providing expert feedback to improve real-world reasoning.",
+        tech: ["Large Language Models (LLM)", "Prompt Engineering", "Model Evaluation", "Multimodal AI Applications", "Research & Analysis"]
+    },
+    {
         company: "The Ohio State University",
         role: "S2F Student Assistant",
         date: "Aug 2025 - Present",
