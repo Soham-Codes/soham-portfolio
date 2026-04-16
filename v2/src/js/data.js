@@ -54,7 +54,7 @@ export const experience = [
         role: "Incoming Product Management Intern",
         date: "Apr 2026 - Present",
         sortDate: "2026-04",
-        description: "Incoming Product Management Intern \n Cincinnati, Ohio",
+        description: "Incoming Product Management Intern <br> Cincinnati, Ohio",
         tech: []
     },
     {
