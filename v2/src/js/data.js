@@ -1,5 +1,12 @@
 export const projects = [
     {
+        title: "Prompt MRI",
+        description: "Prompt MRI is a diagnostic engine designed to improve the reliability of human and AI interactions. Built during the Hack AI Hackathon, the project focuses on analyzing the structural integrity of prompts and AI-generated responses instead of blindly optimizing outputs. The system scans prompts before they are sent to a model and surfaces ambiguity, hidden assumptions, missing context, unclear constraints, and potential hallucination risk zones.",
+        tech: ["JavaScript", "Large Language Models (LLM)", "Prompt Engineering", "API Integration", "Responsible and Ethical AI"],
+        link: "https://github.com/Soham-Codes/prompt-mri",
+        color: "#19747E"
+    },
+    {
         title: "MoodLogger",
         description: "Built as a part of BDAA Project Series. A mental health web app designed to help students practice mindfulness, access personalized emotional support, and improve mental well-being.",
         tech: ["Full-Stack Development", "AI Integration", "Human-centered Design"],
@@ -42,6 +49,14 @@ export const projects = [
 ];
 
 export const experience = [
+    {
+        company: "Kroger",
+        role: "Incoming Product Management Intern",
+        date: "Apr 2026 - Present",
+        sortDate: "2026-04",
+        description: "Incoming Product Management Intern located in Cincinnati, Ohio, United States.",
+        tech: []
+    },
     {
         company: "Handshake AI",
         role: "AI Model Trainer (Contract Based)",
