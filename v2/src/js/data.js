@@ -51,7 +51,7 @@ export const projects = [
 export const experience = [
     {
         company: "Kroger",
-        role: "Incoming Product Management Intern",
+        role: "Product Management Intern",
         date: "Apr 2026 - Present",
         sortDate: "2026-04",
         description: "Worked on an internal search and product discovery tool used by digital category managers to improve the searching experience of end customers on Kroger.com.<br> Cincinnati, Ohio",
