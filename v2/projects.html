@@ -11,43 +11,64 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects | Soham Joshi</title>
+    <meta name="description" content="Technical software and AI projects developed by Soham Joshi, Computer Science & Engineering student at The Ohio State University." />
 </head>
 
-<body class="flex flex-col min-h-screen bg-white">
+<body class="flex flex-col min-h-screen bg-slate-50/50">
 
-    <nav class="w-full py-6 border-b border-slate-100 bg-white/80 backdrop-blur-sm fixed top-0 z-50">
-        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
-            <a href="./" class="text-xl font-bold text-slate-900 tracking-tight">Soham Joshi</a>
-            <div class="hidden md:flex gap-8">
+    <!-- Mobile Nav Backdrop -->
+    <div id="nav-backdrop"></div>
+
+    <!-- Navigation -->
+    <nav class="w-full py-4 border-b border-slate-200/80 bg-white/80 backdrop-blur-md fixed top-0 z-50 transition-all">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <a href="./" class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2 group">
+                <span class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-semibold text-sm group-hover:bg-teal-800 transition-colors">SJ</span>
+                Soham Joshi
+            </a>
+            
+            <div class="hidden md:flex gap-8 items-center">
                 <a href="./" class="nav-link">Home</a>
                 <a href="projects.html" class="nav-link active">Projects</a>
                 <a href="experience.html" class="nav-link">Experience</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
+
+            <button id="nav-toggle" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <svg class="w-6 h-6 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <div id="nav-menu" class="md:hidden">
+            <a href="./" class="nav-link text-lg py-2">Home</a>
+            <a href="projects.html" class="nav-link text-lg py-2">Projects</a>
+            <a href="experience.html" class="nav-link text-lg py-2">Experience</a>
+            <a href="contact.html" class="nav-link text-lg py-2">Contact</a>
         </div>
     </nav>
 
-    <main class="flex-grow max-w-4xl mx-auto px-6 pt-32 pb-20 w-full">
-        <div class="mb-12">
-            <h1 class="text-3xl font-bold text-slate-900 mb-4">All Projects</h1>
-            <p class="text-slate-600">A collection of my technical projects and experiments.</p>
+    <main class="flex-grow max-w-5xl mx-auto px-6 pt-32 pb-20 w-full space-y-10">
+        <div class="text-center space-y-3 max-w-2xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Featured & Technical Projects</h1>
+            <p class="text-slate-600 text-base">A showcase of software applications, AI diagnostic engines, hackathon submissions, and campus platforms.</p>
         </div>
 
-        <div id="project-grid" class="grid md:grid-cols-2 gap-6">
-            <!-- Projects injected by JS -->
+        <div id="project-grid" class="grid md:grid-cols-2 gap-8">
+            <!-- Projects injected dynamically by JS -->
         </div>
     </main>
 
-    <footer class="py-8 border-t border-slate-100 text-center">
-        <div class="flex justify-center gap-6 mb-4">
-            <a href="https://github.com/Soham-Codes" target="_blank"
-                class="text-slate-400 hover:text-slate-900 transition-colors">GitHub</a>
-            <a href="https://www.linkedin.com/in/sohamjoshi0110/" target="_blank"
-                class="text-slate-400 hover:text-slate-900 transition-colors">LinkedIn</a>
-            <a href="https://linktr.ee/sohamj10" target="_blank"
-                class="text-slate-400 hover:text-slate-900 transition-colors">Linktree</a>
+    <footer class="py-10 border-t border-slate-200/80 bg-white text-center mt-auto">
+        <div class="max-w-5xl mx-auto px-6 space-y-4">
+            <div class="flex justify-center gap-6">
+                <a href="https://github.com/Soham-Codes" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm">GitHub</a>
+                <a href="https://www.linkedin.com/in/sohamjoshi0110/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm">LinkedIn</a>
+                <a href="https://linktr.ee/sohamj10" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm">Linktree</a>
+            </div>
+            <p class="text-slate-400 text-xs">© Soham Joshi • Built with clean modern standards</p>
         </div>
-        <p class="text-slate-400 text-sm">© Created with ❤️ by Soham using Google Antigravity</p>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
