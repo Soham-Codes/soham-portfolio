@@ -76,6 +76,8 @@ function createProjectCardHtml(project) {
         </div>
     ` : '';
 
+    const repoPath = project.link ? project.link.replace('https://github.com/', '') : '';
+
     return `
         <div class="card h-full flex flex-col group">
             ${logoBlock}
@@ -84,11 +86,14 @@ function createProjectCardHtml(project) {
             <div class="flex flex-wrap gap-2 mb-6">
                 ${project.tech.map(t => `<span class="badge">${t}</span>`).join('')}
             </div>
-            <div class="flex flex-wrap gap-3 pt-2 border-t border-slate-100 mt-auto">
+            <div class="flex flex-wrap gap-2.5 items-center pt-2 border-t border-slate-100 mt-auto">
                 ${project.link ? `
-                    <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs py-2 px-3.5 flex items-center gap-1.5">
-                        <svg class="w-4 h-4 text-slate-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        View Code
+                    <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900 text-slate-100 hover:bg-slate-800 border border-slate-800 px-3.5 py-2 rounded-xl text-xs font-mono transition-all duration-200 hover:-translate-y-0.5 shadow-xs group/repo">
+                        <span class="w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </span>
+                        <span class="font-medium text-sky-400 group-hover/repo:text-sky-300 transition-colors">${repoPath}</span>
+                        <svg class="w-3 h-3 text-slate-400 group-hover/repo:text-slate-200 group-hover/repo:translate-x-0.5 transition-all ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
                 ` : ''}
                 ${project.demoLink ? `
