@@ -81,8 +81,8 @@ const featuredProjectsGrid = document.getElementById('featured-projects-grid');
 function createProjectCardHtml(project) {
     const logoSrc = project.logo ? resolvePath(project.logo) : '';
     const logoBlock = logoSrc ? `
-        <div class="w-full h-44 rounded-xl overflow-hidden bg-slate-900/5 border border-slate-200/70 flex items-center justify-center p-4 mb-6 group-hover:border-slate-300 transition-all">
-            <img src="${logoSrc}" alt="${project.title} logo" class="max-h-36 max-w-[85%] object-contain rounded-md shadow-xs transition-transform duration-300 group-hover:scale-105">
+        <div class="w-full h-32 rounded-xl overflow-hidden bg-slate-900/5 border border-slate-200/70 flex items-center justify-center p-4 mb-6 group-hover:border-slate-300 transition-all">
+            <img src="${logoSrc}" alt="${project.title} logo" class="max-h-24 max-w-[80%] object-contain rounded-md shadow-xs transition-transform duration-300 group-hover:scale-105">
         </div>
     ` : '';
 
@@ -155,7 +155,7 @@ if (experienceContainer) {
 
         const logoSrc = exp.logo ? resolvePath(exp.logo) : '';
         const logoBlock = logoSrc ? `
-            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 p-1.5 shadow-xs flex-shrink-0 flex items-center justify-center">
+            <div class="w-16 h-16 rounded-xl bg-white border border-slate-200 p-2 shadow-xs flex-shrink-0 flex items-center justify-center">
                 <img src="${logoSrc}" alt="${exp.company} logo" class="max-h-full max-w-full object-contain">
             </div>
         ` : '';
