@@ -35,7 +35,7 @@ if (companyLogosGrid) {
         const box = document.createElement('div');
         box.className = 'logo-box';
         box.innerHTML = `
-            <img src="${resolvePath(org.logo)}" alt="${org.company} logo" class="max-h-12 max-w-[85%] object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="${resolvePath(org.logo)}" alt="${org.company} logo" class="max-h-12 max-w-[85%] object-contain transition-all duration-300">
         `;
         companyLogosGrid.appendChild(box);
     });
