@@ -51,9 +51,12 @@ if (categorizedSkillsContainer) {
         group.className = 'bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all';
         
         const skillsHtml = cat.skills.map(s => {
-            const iconUrl = skillIcons[s];
-            const iconImg = iconUrl ? `<img src="${iconUrl}" alt="${s}" class="w-4 h-4 object-contain flex-shrink-0">` : '';
-            return `<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-50 text-slate-800 border border-slate-200/80 hover:bg-white hover:border-slate-300 hover:shadow-2xs transition-all">${iconImg}<span>${s}</span></span>`;
+            const badgeUrl = skillIcons[s];
+            if (badgeUrl) {
+                return `<img src="${badgeUrl}" alt="${s}" class="h-7 object-contain rounded-md shadow-2xs hover:scale-105 transition-transform duration-200">`;
+            } else {
+                return `<span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200/80">${s}</span>`;
+            }
         }).join('');
 
         group.innerHTML = `
@@ -61,7 +64,7 @@ if (categorizedSkillsContainer) {
                 <span class="w-2 h-2 rounded-full bg-teal-600"></span>
                 ${cat.name}
             </h3>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2.5 items-center">
                 ${skillsHtml}
             </div>
         `;
