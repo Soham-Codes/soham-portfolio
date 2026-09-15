@@ -152,6 +152,56 @@ export const skillCategories = [
     }
 ];
 
+export const skillIcons = {
+    // Programming Languages
+    "Python": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/python/python-original.svg",
+    "Java": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/java/java-original.svg",
+    "C": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/c/c-original.svg",
+    "JavaScript": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/javascript/javascript-original.svg",
+
+    // AI & Data Science
+    "Large Language Models (LLM)": "https://api.iconify.design/heroicons:sparkles-solid.svg",
+    "Prompt Engineering": "https://api.iconify.design/heroicons:command-line-solid.svg",
+    "Gemini AI": "https://api.iconify.design/simple-icons:googlegemini.svg",
+    "PyTorch": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/pytorch/pytorch-original.svg",
+    "NumPy": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/numpy/numpy-original.svg",
+    "Pandas": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/pandas/pandas-original.svg",
+    "Responsible AI": "https://api.iconify.design/heroicons:shield-check-solid.svg",
+
+    // Web & Cloud
+    "React": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/react/react-original.svg",
+    "Flask": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/flask/flask-original.svg",
+    "Node.js": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/nodejs/nodejs-original.svg",
+    "HTML5": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/html5/html5-original.svg",
+    "CSS3": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/css3/css3-original.svg",
+    "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    "Three.js": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/threejs/threejs-original.svg",
+    "GSAP": "https://api.iconify.design/simple-icons:greensock.svg",
+    "Supabase": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/supabase/supabase-original.svg",
+    "Firebase": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/firebase/firebase-plain.svg",
+    "MySQL": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/mysql/mysql-original.svg",
+    "Google Cloud": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/googlecloud/googlecloud-original.svg",
+    "Vercel": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/vercel/vercel-original.svg",
+    "Render": "https://api.iconify.design/simple-icons:render.svg",
+    "Vite": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/vite/vite-original.svg",
+
+    // Developer Tools
+    "Git": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/git/git-original.svg",
+    "GitHub": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/github/github-original.svg",
+    "LaTeX": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/latex/latex-original.svg",
+    "Windows Terminal": "https://api.iconify.design/simple-icons:windowsterminal.svg",
+    "Arduino": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/arduino/arduino-original.svg",
+
+    // Design & Product
+    "Figma": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/figma/figma-original.svg",
+    "Adobe Creative Cloud": "https://api.iconify.design/simple-icons:adobecreativecloud.svg",
+    "Canva": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/canva/canva-original.svg",
+    "GIMP": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/gimp/gimp-original.svg",
+    "Jira": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/jira/jira-original.svg",
+    "Notion": "https://cdn.jsdelivr.net/gh/devicon/devicon/icons/notion/notion-original.svg",
+    "Power BI": "https://api.iconify.design/simple-icons:powerbi.svg"
+};
+
 export const skills = [
     "Python", "Java", "C", "JavaScript", "React", "Flask", "Three.js", "GSAP", "Tailwind CSS", "Gemini AI", "Git"
 ];

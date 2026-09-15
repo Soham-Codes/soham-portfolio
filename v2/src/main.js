@@ -1,5 +1,5 @@
 import './style.css';
-import { projects, experience, skillCategories } from './js/data.js';
+import { projects, experience, skillCategories, skillIcons } from './js/data.js';
 import { initNav } from './js/nav.js';
 
 // Initialize navigation handler
@@ -49,13 +49,20 @@ if (categorizedSkillsContainer) {
     skillCategories.forEach(cat => {
         const group = document.createElement('div');
         group.className = 'bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all';
+        
+        const skillsHtml = cat.skills.map(s => {
+            const iconUrl = skillIcons[s];
+            const iconImg = iconUrl ? `<img src="${iconUrl}" alt="${s}" class="w-4 h-4 object-contain flex-shrink-0">` : '';
+            return `<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-50 text-slate-800 border border-slate-200/80 hover:bg-white hover:border-slate-300 hover:shadow-2xs transition-all">${iconImg}<span>${s}</span></span>`;
+        }).join('');
+
         group.innerHTML = `
-            <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-teal-600"></span>
                 ${cat.name}
             </h3>
             <div class="flex flex-wrap gap-2">
-                ${cat.skills.map(s => `<span class="badge hover:border-slate-300 hover:text-slate-900">${s}</span>`).join('')}
+                ${skillsHtml}
             </div>
         `;
         categorizedSkillsContainer.appendChild(group);
