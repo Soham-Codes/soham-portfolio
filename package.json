@@ -1,0 +1,9 @@
+{
+  "name": "soham-portfolio-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix v2 run dev",
+    "build": "npm --prefix v2 run build",
+    "preview": "npm --prefix v2 run preview"
+  }
+}
