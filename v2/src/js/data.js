@@ -57,8 +57,8 @@ export const experience = [
     {
         company: "Kroger",
         role: "Product Management Intern",
-        date: "Apr 2026 - Present",
-        sortDate: "2026-04",
+        date: "May 2026 - Aug 2026",
+        sortDate: "2026-05",
         description: "Worked on an internal search and product discovery tool used by digital category managers to improve the searching experience of end customers on Kroger.com.<br> Cincinnati, Ohio",
         tech: [],
         logo: "logos/kroger.png",
@@ -67,20 +67,32 @@ export const experience = [
     {
         company: "Handshake AI",
         role: "AI Model Trainer (Contract Based)",
-        date: "Dec 2025 - Present",
-        sortDate: "2026-01",
+        date: "Dec 2025 - Jan 2026",
+        sortDate: "2025-12",
         description: "Developed and evaluated domain-specific prompts to test multimodal LLMs across text, audio and visual inputs. Analyzed LLM outputs for scientific accuracy, clarity, and depth, providing expert feedback to improve real-world reasoning.",
         tech: ["Large Language Models (LLM)", "Prompt Engineering", "Model Evaluation", "Multimodal AI Applications", "Research & Analysis"],
         logo: "logos/handshake.png"
     },
     {
         company: "The Ohio State University",
-        role: "S2F Student Assistant",
-        date: "Aug 2025 - Present",
+        date: "Aug 2024 - Present",
         sortDate: "2025-12",
-        description: "Providing first-line customer service and technical support for a 24-hour operations environment. Handling facility and IT service requests, troubleshooting technology issues, and monitoring building systems.",
-        tech: ["Customer Service", "Communication", "Problem Solving", "Teamwork"],
-        logo: "logos/osu.png"
+        location: "Columbus, Ohio",
+        logo: "logos/osu.png",
+        roles: [
+            {
+                role: "S2F Student Assistant",
+                date: "Aug 2025 - Present",
+                description: "Providing first-line customer service and technical support for a 24-hour operations environment. Handling facility and IT service requests, troubleshooting technology issues, and monitoring building systems.",
+                tech: ["Customer Service", "Communication", "Problem Solving", "Teamwork"]
+            },
+            {
+                role: "Student Assistant (Arts and Sciences)",
+                date: "Aug 2024 - Apr 2025",
+                description: "Assisted students with scheduling academic advising appointments and provided support to the advising team. Managed appointment systems and ensured effective communication.",
+                tech: ["Appointment Scheduling", "Customer Service", "Administrative Support", "Communication"]
+            }
+        ]
     },
     {
         company: "Persistent Systems",
@@ -99,15 +111,6 @@ export const experience = [
         description: "Supported the development of a structured cybersecurity framework (ISO 27001, NIST CSF). Drafted policies, created Incident Response Plans, and recommended security tools.",
         tech: ["Cybersecurity Frameworks", "Incident Response", "Policy Development", "Risk & Compliance"],
         logo: "logos/innaccel.png"
-    },
-    {
-        company: "The Ohio State University",
-        role: "Student Assistant (Arts and Sciences)",
-        date: "Aug 2024 - Apr 2025",
-        sortDate: "2025-04",
-        description: "Assisted students with scheduling academic advising appointments and provided support to the advising team. Managed appointment systems and ensured effective communication.",
-        tech: ["Appointment Scheduling", "Customer Service", "Administrative Support", "Communication"],
-        logo: "logos/osu.png"
     },
     {
         company: "PeopleBlox",

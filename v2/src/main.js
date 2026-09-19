@@ -167,31 +167,80 @@ if (experienceContainer) {
             </span>
         ` : '';
 
-        const contentCard = `
-            <div class="card w-full text-left relative">
-                <div class="flex items-start justify-between gap-4 mb-3">
-                    <div class="flex items-center gap-3.5">
-                        ${logoBlock}
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-teal-800 transition-colors">${exp.role}</h3>
-                            <h4 class="text-slate-700 font-medium text-sm flex items-center gap-2 flex-wrap">
-                                ${exp.company}
-                                ${locationBlock}
-                            </h4>
+        let contentCard;
+        if (exp.roles && exp.roles.length > 0) {
+            const rolesHtml = exp.roles.map((r, rIndex) => {
+                const isLast = rIndex === exp.roles.length - 1;
+                return `
+                    <div class="relative pl-6 ${isLast ? '' : 'pb-6'} group/role">
+                        ${isLast ? '' : '<div class="absolute left-1.5 top-3 -bottom-3 w-0.5 bg-slate-200"></div>'}
+                        <div class="absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full bg-white border-2 border-slate-700 group-hover/role:border-teal-700 group-hover/role:scale-110 transition-all shadow-2xs"></div>
+                        
+                        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1.5">
+                            <h4 class="text-base font-bold text-slate-900 group-hover/role:text-teal-800 transition-colors">${r.role}</h4>
+                            <span class="text-xs font-semibold text-slate-500 bg-slate-100 border border-slate-200/60 px-2 py-0.5 rounded-full self-start flex-shrink-0">
+                                ${r.date}
+                            </span>
                         </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3">${r.description}</p>
+                        ${r.tech && r.tech.length > 0 ? `
+                            <div class="flex flex-wrap gap-1.5 pt-1">
+                                ${r.tech.map(t => `<span class="badge text-[11px]">${t}</span>`).join('')}
+                            </div>
+                        ` : ''}
                     </div>
-                    <span class="text-xs font-semibold text-slate-500 bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-full flex-shrink-0 self-start">
-                        ${exp.date}
-                    </span>
+                `;
+            }).join('');
+
+            contentCard = `
+                <div class="card w-full text-left relative">
+                    <div class="flex items-start justify-between gap-4 mb-4 pb-4 border-b border-slate-100">
+                        <div class="flex items-center gap-3.5">
+                            ${logoBlock}
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 group-hover:text-teal-800 transition-colors">${exp.company}</h3>
+                                <div class="text-slate-500 font-medium text-xs flex items-center gap-2 flex-wrap mt-0.5">
+                                    <span>${exp.date}</span>
+                                    ${locationBlock}
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-teal-800 bg-teal-50 border border-teal-200/60 px-2.5 py-1 rounded-full flex-shrink-0 self-start">
+                            ${exp.roles.length} roles
+                        </span>
+                    </div>
+                    <div class="pt-1">
+                        ${rolesHtml}
+                    </div>
                 </div>
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">${exp.description}</p>
-                ${exp.tech && exp.tech.length > 0 ? `
-                    <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-                        ${exp.tech.map(t => `<span class="badge text-[11px]">${t}</span>`).join('')}
+            `;
+        } else {
+            contentCard = `
+                <div class="card w-full text-left relative">
+                    <div class="flex items-start justify-between gap-4 mb-3">
+                        <div class="flex items-center gap-3.5">
+                            ${logoBlock}
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 group-hover:text-teal-800 transition-colors">${exp.role}</h3>
+                                <h4 class="text-slate-700 font-medium text-sm flex items-center gap-2 flex-wrap">
+                                    ${exp.company}
+                                    ${locationBlock}
+                                </h4>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-full flex-shrink-0 self-start">
+                            ${exp.date}
+                        </span>
                     </div>
-                ` : ''}
-            </div>
-        `;
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">${exp.description}</p>
+                    ${exp.tech && exp.tech.length > 0 ? `
+                        <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+                            ${exp.tech.map(t => `<span class="badge text-[11px]">${t}</span>`).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
 
         item.innerHTML = `
             <div class="hidden sm:block absolute left-6 md:left-1/2 w-4 h-4 bg-white border-4 border-slate-900 rounded-full -translate-x-1/2 top-6 z-10 shadow-xs group-hover:scale-125 transition-transform"></div>
