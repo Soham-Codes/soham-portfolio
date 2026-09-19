@@ -87,9 +87,9 @@ export const experience = [
                 tech: ["Customer Service", "Communication", "Problem Solving", "Teamwork"]
             },
             {
-                role: "Student Assistant (Arts and Sciences)",
+                role: "Advising Student Assistant",
                 date: "Aug 2024 - Apr 2025",
-                description: "Assisted students with scheduling academic advising appointments and provided support to the advising team. Managed appointment systems and ensured effective communication.",
+                description: "Assisted students at the College of Arts and Sciences with scheduling academic advising appointments and provided support to the advising team. Managed appointment systems and ensured effective communication.",
                 tech: ["Appointment Scheduling", "Customer Service", "Administrative Support", "Communication"]
             }
         ]
