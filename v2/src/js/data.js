@@ -1,6 +1,7 @@
 export const projects = [
     {
         title: "Prompt MRI",
+        category: "software",
         description: "Built during the Hack AI Hackathon. A diagnostic engine that analyzes the structural integrity of prompts and AI responses to mitigate hallucination risks and improve reliability.",
         tech: ["JavaScript", "Large Language Models (LLM)", "Prompt Engineering", "API Integration", "Responsible and Ethical AI"],
         link: "https://github.com/Soham-Codes/prompt-mri",
@@ -9,6 +10,7 @@ export const projects = [
     },
     {
         title: "MoodLogger",
+        category: "software",
         description: "Built as a part of BDAA Project Series. A mental health web app designed to help students practice mindfulness, access personalized emotional support, and improve mental well-being.",
         tech: ["Full-Stack Development", "AI Integration", "Human-centered Design"],
         link: "https://github.com/Soham-Codes/moodlogger",
@@ -18,6 +20,7 @@ export const projects = [
     },
     {
         title: "UniConnect",
+        category: "software",
         description: "A mobile app that aims to support international students as they move abroad to pursue higher education.",
         tech: ["Mobile App Development", "DBMS", "Agile Methodologies"],
         demoLink: "https://uniconnectapp.vercel.app/",
@@ -27,6 +30,7 @@ export const projects = [
     },
     {
         title: "Buckeye Borrow",
+        category: "software",
         description: "Built as a part of BDAA + Lovable Hackathon. Buckeye Borrow is a campus lending platform that helps Ohio State students borrow and lend everyday items at no extra cost.",
         tech: ["Product Development", "Lovable AI", "Human-centered Design", "Supabase"],
         link: "https://github.com/Soham-Codes/buckeyeborrow",
@@ -36,6 +40,7 @@ export const projects = [
     },
     {
         title: "Flow",
+        category: "software",
         description: "Built as a Hack OHI/O project. Flow is a web platform that predicts and visualizes real time busyness levels in campus study spaces to help students find open areas more easily.",
         tech: ["Google AI Studio", "Google Gemini AI", "Google Maps API"],
         link: "https://github.com/Soham-Codes/flow-latest",
@@ -44,12 +49,53 @@ export const projects = [
     },
     {
         title: "T&See",
+        category: "software",
         description: "A live Chrome Extension powered by Gemini AI and Flask that turns lengthy Terms and Conditions into clear highlights.",
         tech: ["Chrome Extension Development", "Flask", "Google Gemini AI", "Render"],
         link: "https://github.com/Soham-Codes/tandsee-project",
         demoLink: "https://tandsee.vercel.app/",
         color: "#19747E",
         logo: "projects/tandsee.jpg"
+    },
+    {
+        title: "AI Powered Health Tools & Digital Health Literacy",
+        category: "coursework",
+        course: "COMPSTD 4645",
+        institution: "The Ohio State University",
+        date: "Jan 2026 – May 2026",
+        description: "Conducted an independent research project examining how AI-powered health tools affect access to medical information for individuals with different levels of digital health literacy. Collected and analyzed data through a community survey and semi-structured interview, then developed a conceptual access map highlighting barriers such as digital literacy, technology access, language, trust, and information reliability. Explored how AI can improve access to health information while also potentially reinforcing existing inequalities.",
+        tech: ["Data Analysis", "Artificial Intelligence (AI)", "Digital Health Literacy", "Research & Ethics"],
+        color: "#19747E"
+    },
+    {
+        title: "Ethics of AR/VR: Identity, Privacy & Harm in Immersive Worlds",
+        category: "coursework",
+        course: "PHILOS 2338",
+        institution: "The Ohio State University",
+        date: "Aug 2025 – Dec 2025",
+        description: "Conducted an individual ethics analysis of augmented and virtual reality technologies, focusing on identity, biometric data collection, privacy, user autonomy, and psychological harm in immersive environments. Evaluated existing ACM, IEEE, and APA ethical principles and examined how traditional technology ethics frameworks may fall short when applied to AR/VR. Proposed stronger protections including explicit biometric-data consent, limits on real-time profiling, safeguards against identity manipulation, and privacy-by-design practices.",
+        tech: ["Technology Ethics", "Research & Analysis", "Emerging Tech Policy", "AR/VR"],
+        color: "#19747E"
+    },
+    {
+        title: "Portable Left-Handed Lecture Desk – Team Food Critics",
+        category: "coursework",
+        course: "ENGR 1182",
+        institution: "The Ohio State University",
+        date: "Jan 2025 – May 2025",
+        description: "Collaborated with a team of four to design and prototype a portable desk attachment aimed at improving comfort and workspace for left-handed students in lecture halls. Developed cardboard mock-ups and CAD models in Onshape before fabricating and testing a functional wooden prototype featuring a folding mechanism, desk attachment system, and integrated cup holder. Conducted user validation and prototype testing to evaluate portability, usability, cost, and overall design effectiveness.",
+        tech: ["Onshape", "Engineering Design", "Rapid Prototyping", "CAD Modeling"],
+        color: "#19747E"
+    },
+    {
+        title: "MATLAB Game Development – Wordle & Tic-Tac-Toe",
+        category: "coursework",
+        course: "ENGR 1181",
+        institution: "The Ohio State University",
+        date: "Aug 2024 – Dec 2024",
+        description: "Collaborated in a four-person team to develop fully functional Wordle and Tic-Tac-Toe games in MATLAB. Implemented game logic using arrays, loops, conditional statements, input validation, and sprite-based graphics. The Wordle game supported 2,000+ target words and 14,000+ valid guesses, while Tic-Tac-Toe featured an interactive graphical interface and computer opponent.",
+        tech: ["MATLAB", "Software Development", "Algorithm Design", "Game Logic"],
+        color: "#19747E"
     }
 ];
 

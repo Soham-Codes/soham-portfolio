@@ -75,49 +75,87 @@ if (categorizedSkillsContainer) {
 // ----------------------------------------------------
 // 3. Render Projects Grid (Projects Page & Featured)
 // ----------------------------------------------------
-const projectGrid = document.getElementById('project-grid');
 const featuredProjectsGrid = document.getElementById('featured-projects-grid');
 
 function createProjectCardHtml(project) {
     const logoSrc = project.logo ? resolvePath(project.logo) : '';
     const logoBlock = logoSrc ? `
-        <div class="w-full h-32 rounded-xl overflow-hidden bg-slate-900/5 border border-slate-200/70 flex items-center justify-center p-4 mb-6 group-hover:border-slate-300 transition-all">
+        <div class="w-full h-32 rounded-xl overflow-hidden bg-slate-900/5 border border-slate-200/70 flex items-center justify-center p-4 mb-5 group-hover:border-slate-300 transition-all">
             <img src="${logoSrc}" alt="${project.title} logo" class="max-h-24 max-w-[80%] object-contain rounded-md shadow-xs transition-transform duration-300 group-hover:scale-105">
+        </div>
+    ` : '';
+
+    const courseHeader = project.course ? `
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-red-50 text-red-700 border border-red-200/80">
+                <svg class="w-3.5 h-3.5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+                ${project.course}
+            </span>
+            ${project.date ? `<span class="text-xs text-slate-500 font-medium whitespace-nowrap">${project.date}</span>` : ''}
         </div>
     ` : '';
 
     const repoPath = project.link ? project.link.replace('https://github.com/', '') : '';
 
+    const footerBlock = (project.link || project.demoLink) ? `
+        <div class="flex flex-wrap gap-2.5 items-center pt-3 border-t border-slate-100 mt-auto">
+            ${project.link ? `
+                <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900 text-slate-100 hover:bg-slate-800 border border-slate-800 px-3.5 py-2 rounded-xl text-xs font-mono transition-all duration-200 hover:-translate-y-0.5 shadow-xs group/repo">
+                    <span class="w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </span>
+                    <span class="font-medium text-sky-400 group-hover/repo:text-sky-300 transition-colors">${repoPath}</span>
+                    <svg class="w-3 h-3 text-slate-400 group-hover/repo:text-slate-200 group-hover/repo:translate-x-0.5 transition-all ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            ` : ''}
+            ${project.demoLink ? `
+                <a href="${project.demoLink}" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs py-2 px-3.5 flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    ${project.demoLabel || 'Live Demo'}
+                </a>
+            ` : ''}
+        </div>
+    ` : `
+        <div class="flex items-center gap-2 text-xs text-slate-500 font-medium pt-3 border-t border-slate-100 mt-auto">
+            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            <span>${project.institution || 'The Ohio State University'}</span>
+        </div>
+    `;
+
     return `
         <div class="card h-full flex flex-col group">
+            ${courseHeader}
             ${logoBlock}
             <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-teal-800 transition-colors">${project.title}</h3>
             <p class="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">${project.description}</p>
             <div class="flex flex-wrap gap-2 mb-6">
                 ${project.tech.map(t => `<span class="badge">${t}</span>`).join('')}
             </div>
-            <div class="flex flex-wrap gap-2.5 items-center pt-2 border-t border-slate-100 mt-auto">
-                ${project.link ? `
-                    <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900 text-slate-100 hover:bg-slate-800 border border-slate-800 px-3.5 py-2 rounded-xl text-xs font-mono transition-all duration-200 hover:-translate-y-0.5 shadow-xs group/repo">
-                        <span class="w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
-                            <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        </span>
-                        <span class="font-medium text-sky-400 group-hover/repo:text-sky-300 transition-colors">${repoPath}</span>
-                        <svg class="w-3 h-3 text-slate-400 group-hover/repo:text-slate-200 group-hover/repo:translate-x-0.5 transition-all ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-                ` : ''}
-                ${project.demoLink ? `
-                    <a href="${project.demoLink}" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs py-2 px-3.5 flex items-center gap-1.5">
-                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                        ${project.demoLabel || 'Live Demo'}
-                    </a>
-                ` : ''}
-            </div>
+            ${footerBlock}
         </div>
     `;
 }
 
-if (projectGrid) {
+const softwareProjectsGrid = document.getElementById('software-projects-grid');
+const courseworkProjectsGrid = document.getElementById('coursework-projects-grid');
+const projectGrid = document.getElementById('project-grid');
+
+if (softwareProjectsGrid && courseworkProjectsGrid) {
+    projects.filter(p => p.category === 'software').forEach(project => {
+        const col = document.createElement('div');
+        col.innerHTML = createProjectCardHtml(project);
+        softwareProjectsGrid.appendChild(col.firstElementChild);
+    });
+
+    projects.filter(p => p.category === 'coursework').forEach(project => {
+        const col = document.createElement('div');
+        col.innerHTML = createProjectCardHtml(project);
+        courseworkProjectsGrid.appendChild(col.firstElementChild);
+    });
+} else if (projectGrid) {
     projects.forEach(project => {
         const col = document.createElement('div');
         col.innerHTML = createProjectCardHtml(project);
