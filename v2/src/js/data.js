@@ -105,7 +105,7 @@ export const experience = [
         role: "Product Management Intern",
         date: "May 2026 - Aug 2026",
         sortDate: "2026-05",
-        description: "Worked on an internal search and product discovery tool used by digital category managers to improve the searching experience of end customers on Kroger.com.<br> Cincinnati, Ohio",
+        description: "Worked on an internal search and product discovery tool used by digital category managers to improve the searching experience of end customers on Kroger.com.",
         tech: [],
         logo: "logos/kroger.png",
         location: "Cincinnati, Ohio"
