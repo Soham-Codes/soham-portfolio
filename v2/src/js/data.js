@@ -197,7 +197,7 @@ export const skillCategories = [
     },
     {
         name: "Design & Product Tools",
-        skills: ["Figma", "Adobe Creative Cloud", "Canva", "Jira", "Notion", "Power BI"]
+        skills: ["Figma", "Adobe Creative Cloud", "Canva", "Miro", "Mural", "Jira", "Confluence", "UpRaise", "Notion", "Power BI"]
     }
 ];
 
@@ -207,7 +207,6 @@ export const skillIcons = {
     "Java": "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white",
     "C": "https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white",
     "Ruby": "https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white",
-    "JavaScript": "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
 
     // AI & Data Science
     "Large Language Models (LLM)": "https://img.shields.io/badge/LLM-AI-%2319747E?style=for-the-badge&logo=openai&logoColor=white",
@@ -224,9 +223,6 @@ export const skillIcons = {
     "Node.js": "https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white",
     "HTML5": "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white",
     "CSS3": "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white",
-    "Tailwind CSS": "https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white",
-    "Three.js": "https://img.shields.io/badge/threejs-%23000000.svg?style=for-the-badge&logo=three.js&logoColor=white",
-    "GSAP": "https://img.shields.io/badge/GSAP-%2388CE02.svg?style=for-the-badge&logo=greensock&logoColor=white",
     "Supabase": "https://img.shields.io/badge/supabase-%233FCF8E.svg?style=for-the-badge&logo=supabase&logoColor=white",
     "Firebase": "https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase",
     "MySQL": "https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white",
@@ -246,12 +242,13 @@ export const skillIcons = {
     "Figma": "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white",
     "Adobe Creative Cloud": "https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=for-the-badge&logo=Adobe%20Creative%20Cloud&logoColor=white",
     "Canva": "https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white",
-    "GIMP": "https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF",
+    "Miro": "https://img.shields.io/badge/Miro-FFD02F?style=for-the-badge&logo=miro&logoColor=050038",
+    "Mural": "https://img.shields.io/badge/Mural-FF4B4B?style=for-the-badge&logo=mural&logoColor=white",
+    "Confluence": "https://img.shields.io/badge/Confluence-172B4D?style=for-the-badge&logo=confluence&logoColor=white",
+    "UpRaise": "https://upraise.io/wp-content/uploads/2021/03/Logo.svg",
     "Jira": "https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white",
     "Notion": "https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white",
     "Power BI": "https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"
 };
 
-export const skills = [
-    "Python", "Java", "C", "JavaScript", "React", "Flask", "Three.js", "GSAP", "Tailwind CSS", "Gemini AI", "Git"
-];
+export const skills = skillCategories.flatMap(category => category.skills);
