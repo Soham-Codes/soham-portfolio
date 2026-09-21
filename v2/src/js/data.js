@@ -181,7 +181,7 @@ export const experience = [
 export const skillCategories = [
     {
         name: "Programming Languages",
-        skills: ["Python", "Java", "C", "JavaScript"]
+        skills: ["Python", "Java", "C", "Ruby"]
     },
     {
         name: "AI & Data Science",
@@ -189,7 +189,7 @@ export const skillCategories = [
     },
     {
         name: "Web & Cloud Technologies",
-        skills: ["React", "Flask", "Node.js", "HTML5", "CSS3", "Tailwind CSS", "Three.js", "GSAP", "Supabase", "Firebase", "MySQL", "Google Cloud", "Vercel", "Render", "Vite"]
+        skills: ["React", "Flask", "Node.js", "HTML5", "CSS3", "Supabase", "Firebase", "MySQL", "Google Cloud", "Vercel", "Render", "Vite"]
     },
     {
         name: "Developer Tools & Systems",
@@ -197,7 +197,7 @@ export const skillCategories = [
     },
     {
         name: "Design & Product Tools",
-        skills: ["Figma", "Adobe Creative Cloud", "Canva", "GIMP", "Jira", "Notion", "Power BI"]
+        skills: ["Figma", "Adobe Creative Cloud", "Canva", "Jira", "Notion", "Power BI"]
     }
 ];
 
@@ -206,6 +206,7 @@ export const skillIcons = {
     "Python": "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54",
     "Java": "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white",
     "C": "https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white",
+    "Ruby": "https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white",
     "JavaScript": "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
 
     // AI & Data Science
@@ -254,4 +255,3 @@ export const skillIcons = {
 export const skills = [
     "Python", "Java", "C", "JavaScript", "React", "Flask", "Three.js", "GSAP", "Tailwind CSS", "Gemini AI", "Git"
 ];
-
